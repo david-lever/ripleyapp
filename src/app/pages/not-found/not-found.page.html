@@ -1,0 +1,41 @@
+<ion-header [translucent]="false">
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button text="" [icon]="buttonIcon"> </ion-back-button>
+    </ion-buttons>
+    <ion-img
+      class="toolbar-logo"
+      src="./assets/logos/Ripley_logo_R_website_with_bg_2016-present.webp"
+    >
+    </ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content padding class="background">
+    <ion-img
+      class="logo"
+      src="./assets/logos/Ripley_logo_R_website_borders_2016-present.webp"
+    ></ion-img>
+  </ion-content>
+</ion-content>
+
+<ion-footer class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="account" (click)="account()">
+          <ion-icon name="person-circle-sharp"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="scan" (click)="scan()">
+          <ion-icon name="scan-sharp"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="settings" (click)="settings()">
+          <ion-icon name="settings-sharp"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

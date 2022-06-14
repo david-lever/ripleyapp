@@ -1,0 +1,205 @@
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Header Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-header {
+  --background: ##6a308d;
+  backdrop-filter: blur(7px);
+}
+
+.header-toolbar {
+  --background: #000000;
+  backdrop-filter: blur(7px);
+}
+
+ion-img.toolbar-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6vh;
+  height: 6vh;
+}
+
+.title {
+  --color: #ffffff;
+  text-align: center;
+}
+
+.back-button {
+  --background: #ffffff;
+}
+
+ion-buttons {
+  ion-back-button {
+    --color: #ffffff;
+  }
+}
+
+.notification {
+  --color: #ffffff;
+}
+
+.filter {
+  --color: #ffffff;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Background ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-content {
+  --background: linear-gradient(
+      180deg,
+      #fbf6ff 0%,
+      #eae1f0 48.96%,
+      #e2d3eb 100%
+    ),
+    rgba(68, 18, 101, 0.3);
+  --backdrop-filter: blur(100px);
+  --width: calc(100% + 15px);
+}
+
+ion-list-header {
+  --font-family: Gilroy;
+  --font-weight: bold;
+  --color: #6a308d;
+}
+
+ion-content.background {
+  --background: url(../../../assets/img/bg.png) 0 0/100% 100% no-repeat;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Card ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-card {
+  margin: 3vh 3vh;
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(7px);
+  border-radius: 20px;
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ion-item {
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  backdrop-filter: blur(15px);
+  border-radius: 17.5px;
+  ion-icon {
+    display: block;
+    margin: 0vh auto;
+    color: #6a308d;
+  }
+}
+
+ion-label.user {
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  --color: #6a308d;
+}
+
+ion-list {
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  ion-icon {
+    --background: #6a308d;
+    --box-shadow: -8px -4px 16px #ffffff,
+      6px 4px 16px rgba(135, 104, 155, 0.549),
+      inset 0.5px 0.5px 0.5px rgba(68, 18, 101, 0.549),
+      inset -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+ion-searchbar {
+  font-style: italic;
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(7px);
+  border-radius: 20px;
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+  ion-icon {
+    color: #6a308d;
+  }
+}
+
+h2.text-center {
+  margin: auto;
+  font-weight: bold;
+  font-size: larger;
+  color: "#6a308d";
+  text-align: center;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Floating Bar Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-fab-button {
+  --background: linear-gradient(
+      305.4deg,
+      rgba(253, 186, 49, 0.7) 13.72%,
+      rgba(255, 234, 190, 0.7) 93.17%
+    ),
+    rgba(251, 189, 30, 0.92);
+  --box-shadow: 6px 4px 16px rgba(68, 18, 101, 0.549),
+    -6px -4px 16px rgba(255, 255, 255, 0.36),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.38, 0.66, 0, 1) both;
+  ion-icon {
+    color: #6a308d;
+  }
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-footer {
+  --background: rgba(228, 237, 245, 0.75);
+  backdrop-filter: blur(7px);
+}
+
+ion-tab-button {
+  ion-icon {
+    color: #6a308d;
+  }
+}

@@ -1,0 +1,77 @@
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Header Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-header {
+  --background: ##6a308d;
+  backdrop-filter: blur(7px);
+}
+
+.header-toolbar {
+  --background: #000000;
+  backdrop-filter: blur(7px);
+}
+
+ion-img.toolbar-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6vh;
+  height: 6vh;
+}
+
+.title {
+  --color: #ffffff;
+  height: 7vh;
+  text-align: center;
+}
+
+ion-buttons {
+  ion-back-button {
+    --color: #ffffff;
+  }
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Background ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-content {
+  --background: linear-gradient(
+      180deg,
+      #fbf6ff 0%,
+      #eae1f0 48.96%,
+      #e2d3eb 100%
+    ),
+    rgba(68, 18, 101, 0.3);
+  --backdrop-filter: blur(100px);
+  --width: calc(100% + 15px);
+}
+
+ion-content.background {
+  --background: url(../../../assets/img/bg.png) 0 0/100% 100% no-repeat;
+  -webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Logo ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-img.logo {
+  position: absolute;
+  display: block;
+  margin: 14vh;
+  width: 50%;
+  height: 50%;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-footer {
+  --background: rgba(228, 237, 245, 0.75);
+  backdrop-filter: blur(7px);
+}
+
+ion-tab-button {
+  ion-icon {
+    color: #6a308d;
+  }
+}

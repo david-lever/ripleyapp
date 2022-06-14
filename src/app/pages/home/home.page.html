@@ -1,0 +1,165 @@
+<ion-header [translucent]="false">
+  <ion-toolbar class="header-toolbar">
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="techno" slot="start"></ion-icon>
+            <ion-label>Tecno</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="pets" slot="start"></ion-icon>
+            <ion-label>Mascotas</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="electro" slot="start"></ion-icon>
+            <ion-label>Electro</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="furniture" slot="start"></ion-icon>
+            <ion-label>Muebles</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="decor" slot="start"></ion-icon>
+            <ion-label>Decoración</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="room" slot="start"></ion-icon>
+            <ion-label>Dormitorio</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="sports" slot="start"></ion-icon>
+            <ion-label>Deporte y Aventura</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="toys" slot="start"></ion-icon>
+            <ion-label>Juguetería y niños</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="shoes" slot="start"></ion-icon>
+            <ion-label>Zapatos y Zapatillas</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="accessories" slot="start"></ion-icon>
+            <ion-label>Accesorios y complementos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="beauty" slot="start"></ion-icon>
+            <ion-label>Belleza</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="woman-fashion" slot="start"></ion-icon>
+            <ion-label>Moda Mujer</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="man-fashion" slot="start"></ion-icon>
+            <ion-label>Moda Hombre</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="childrens-fashion" slot="start"></ion-icon>
+            <ion-label>Moda Infantil</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="supermarket" slot="start"></ion-icon>
+            <ion-label>Supermercado</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="hardware-store" slot="start"></ion-icon>
+            <ion-label>Ferretería</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="health" slot="start"></ion-icon>
+            <ion-label>Salud y Bienestar</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="automotive" slot="start"></ion-icon>
+            <ion-label>Automotriz</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="others" slot="start"></ion-icon>
+            <ion-label>Otras Categorías</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-img
+      class="toolbar-logo"
+      src="./assets/logos/Ripley_logo_R_website_with_bg_2016-present.webp"
+    >
+    </ion-img>
+    <ion-buttons slot="start">
+      <ion-menu-button name="menu-sharp"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-sharp"></ion-icon>
+      </ion-button>
+      <ion-button class="filter">
+        <ion-icon name="filter-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-content padding class="background"> -->
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-item>
+      <ion-label class="user">
+        <h2 class="text-center">Bienvenido {{username}}</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-searchbar placeholder="Buscar"></ion-searchbar>
+  </ion-card>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button>
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <!-- </ion-content> -->
+</ion-content>
+
+<ion-footer class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="account" (click)="account()">
+          <ion-icon name="person-circle-sharp"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="scan" (click)="scan()">
+          <ion-icon name="scan-sharp"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="settings" (click)="settings()">
+          <ion-icon name="settings-sharp"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
