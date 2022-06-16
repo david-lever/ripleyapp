@@ -39,8 +39,6 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
 
 ### Sprint 2
 
-### Sprint 3
-
 ## Team N° 3 - Section 001D
 
 ### Members
