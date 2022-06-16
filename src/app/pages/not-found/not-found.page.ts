@@ -9,8 +9,12 @@ import { NavigationExtras, Router } from '@angular/router';
 export class NotFoundPage implements OnInit {
   constructor(private router: Router) {}
 
-  account() {
-    this.router.navigate(['/signup']);
+  home() {
+    this.router.navigate(['/home']);
+  }
+
+  bag() {
+    this.router.navigate(['/not-found']);
   }
 
   scan() {

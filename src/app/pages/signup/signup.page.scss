@@ -14,8 +14,8 @@ ion-img.toolbar-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 6vh;
-  height: 6vh;
+  width: 4.5vh;
+  height: 4.5vh;
 }
 
 .title {
@@ -45,7 +45,7 @@ ion-content {
 }
 
 ion-content.background {
-  --background: url(../../../assets/img/bg.png) 0 0/100% 100% no-repeat;
+  --background: url(../../../assets/img/bg.webp) 0 0/100% 100% no-repeat;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Card ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
@@ -60,7 +60,7 @@ ion-card {
   --o-filter: blur(10px);
   --ms-filter: blur(10px);
   --filter: blur(10px);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
   --transform: rotate(-90deg);
   --color: #6a308d;
@@ -111,14 +111,6 @@ ion-item {
   --filter: blur(4px);
 }
 
-ion-label {
-  color: #6a308d;
-}
-
-ion-input {
-  color: #6a308d;
-}
-
 ion-card-subtitle {
   padding: 2vh;
 }
@@ -128,16 +120,18 @@ h2.text-center {
   color: "#6a308d";
 }
 
-label {
+div.signin {
   font-size: 13px;
-  font-weight: bold;
-  margin-right: 1vh;
+  font-weight: 600;
+  margin: 1.5vh;
   color: #6a308d;
 }
 
-input {
-  margin-right: 1vh;
-  color: #6a308d;
+ion-button.signin-link {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0.2vh;
+  color: #f00a47;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Logo ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
@@ -150,9 +144,19 @@ ion-img.logo {
   height: 25%;
 }
 
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Input ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-label {
+  color: #6a308d;
+}
+
+ion-input {
+  color: #6a308d;
+}
+
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-#signup {
+ion-button.signup {
   font-size: 15px;
   font-weight: bold;
   color: #6a308d;
@@ -167,8 +171,11 @@ ion-img.logo {
   margin: 1vh 4vh;
 }
 
-#signup:hover {
-  --background: linear-gradient(90.48deg, #fdde31 -57.8%, #fedc94 146.19%);
+ion-button.signup:hover {
+  font-size: 15px;
+  font-weight: bold;
+  color: #6a308d;
+  --background: linear-gradient(90.48deg, #f00a47 -57.8%, #ee275c 146.19%);
   --box-shadow: -4px -2px 16px rgba(255, 255, 255, 0.509),
     4px 2px 16px rgba(68, 18, 101, 0.549),
     inset -8px -6px 26px rgba(255, 255, 255, 0.18);
@@ -176,6 +183,7 @@ ion-img.logo {
   --webkit-transition: 0.8s all ease;
   --moz-transition: 0.8s all ease;
   --transition: 0.8s all ease;
+  margin: 1vh 4vh;
 }
 
 ion-item.input {
@@ -185,23 +193,28 @@ ion-item.input {
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Checkbox ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-.checkbox {
+label {
+  font-size: 13px;
+  font-weight: 550;
+  margin-right: 0.2vh;
+  color: #6a308d;
+}
+
+input.checkbox {
+  margin-top: 3vh;
+  margin-right: 2vh;
+  height: 2vh;
+  width: 2vh;
+  --background: radial-gradient(
+    315.18% 315.18% at -124.11% -101.79%,
+    #f1e5f9 19%,
+    #ffffff 77.71%
+  );
+  --box-shadow: -6px -4px 16px rgba(255, 255, 255, 0.36),
+    6px 4px 16px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
   border-radius: 30vh;
   font-weight: bold;
-}
-
-#cbox1 {
-  margin-top: 3vh;
-  margin-right: 2vh;
-  height: 2vh;
-  width: 2vh;
-}
-
-#cbox2 {
-  margin-top: 3vh;
-  margin-right: 2vh;
-  height: 2vh;
-  width: 2vh;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Floating Bar Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰

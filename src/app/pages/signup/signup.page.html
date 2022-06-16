@@ -36,17 +36,17 @@
           <form novalidate (ngSubmit)="onSubmit()" #f="ngForm">
             <ion-item class="input" lines="none">
               <ion-label style="color: #6a308d" position="floating"
-                >Usuario</ion-label
+                >Rut</ion-label
               >
               <ion-input
                 type="text"
-                [(ngModel)]="username"
+                [(ngModel)]="rut"
                 required
-                minlength="2"
+                minlength="10"
                 required
-                maxlength="8"
+                maxlength="10"
                 class="form-control"
-                name="username"
+                name="rut"
               ></ion-input>
             </ion-item>
             <ion-item class="input" lines="none">
@@ -67,23 +67,33 @@
           </form>
 
           <label
-            ><input type="checkbox" id="cbox1" /> Al registrarse, aceptas los
-            términos y condiciones.</label
+            ><input type="checkbox" class="checkbox" /> Al registrarse, aceptas
+            los términos y condiciones.</label
           ><br />
           <label
-            ><input type="checkbox" id="cbox2" /> Al registrarse, aceptas la
-            política de seguridad de acuerdo a la Ley Nº 19.628.</label
-          ><br />
+            ><input type="checkbox" class="checkbox" /> Al registrarse, aceptas
+            la política de seguridad de acuerdo a la Ley Nº 19.628.</label
+          >
 
-          <br />
           <ion-button
             type="submit"
             [disabled]="f.invalid"
-            id="signup"
+            class="signup"
             expand="block"
             (click)="signup()"
+            (click)="alert()"
             >Registrarme</ion-button
           >
+          <div class="signin">
+            ¿Dispone de una cuenta?<br />
+            <ion-button
+              class="signin-link"
+              fill="clear"
+              routerLink="/login"
+              routerDirection="forward"
+              >Inicia sesión</ion-button
+            >
+          </div>
         </ion-card-content>
       </ion-card>
     </div>
@@ -114,16 +124,20 @@
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="account" (click)="account()">
-          <ion-icon name="person-circle-sharp"></ion-icon>
+        <ion-tab-button tab="home" (click)="home()">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="bag" (click)="bag()">
+          <ion-icon name="bag-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="scan" (click)="scan()">
-          <ion-icon name="scan-sharp"></ion-icon>
+          <ion-icon name="scan-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="settings" (click)="settings()">
-          <ion-icon name="settings-sharp"></ion-icon>
+          <ion-icon name="settings-outline"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

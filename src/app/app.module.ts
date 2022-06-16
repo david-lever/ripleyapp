@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { EmailJSResponseStatus } from 'emailjs-com';
+import { AlertController } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,8 +31,7 @@ import { EmailJSResponseStatus } from 'emailjs-com';
     BarcodeScanner,
     Base64ToGallery,
     EmailComposer,
-
-    ,
+    AlertController,
   ],
   bootstrap: [AppComponent],
 })

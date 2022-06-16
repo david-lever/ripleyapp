@@ -1,106 +1,21 @@
 <ion-header [translucent]="false">
   <ion-toolbar class="header-toolbar">
-    <ion-menu side="start" content-id="main-content">
-      <ion-header>
-        <ion-toolbar translucent>
-          <ion-title>Menú</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-item>
-            <ion-icon name="techno" slot="start"></ion-icon>
-            <ion-label>Tecno</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="pets" slot="start"></ion-icon>
-            <ion-label>Mascotas</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="electro" slot="start"></ion-icon>
-            <ion-label>Electro</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="furniture" slot="start"></ion-icon>
-            <ion-label>Muebles</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="decor" slot="start"></ion-icon>
-            <ion-label>Decoración</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="room" slot="start"></ion-icon>
-            <ion-label>Dormitorio</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="sports" slot="start"></ion-icon>
-            <ion-label>Deporte y Aventura</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="toys" slot="start"></ion-icon>
-            <ion-label>Juguetería y niños</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="shoes" slot="start"></ion-icon>
-            <ion-label>Zapatos y Zapatillas</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="accessories" slot="start"></ion-icon>
-            <ion-label>Accesorios y complementos</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="beauty" slot="start"></ion-icon>
-            <ion-label>Belleza</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="woman-fashion" slot="start"></ion-icon>
-            <ion-label>Moda Mujer</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="man-fashion" slot="start"></ion-icon>
-            <ion-label>Moda Hombre</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="childrens-fashion" slot="start"></ion-icon>
-            <ion-label>Moda Infantil</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="supermarket" slot="start"></ion-icon>
-            <ion-label>Supermercado</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="hardware-store" slot="start"></ion-icon>
-            <ion-label>Ferretería</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="health" slot="start"></ion-icon>
-            <ion-label>Salud y Bienestar</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="automotive" slot="start"></ion-icon>
-            <ion-label>Automotriz</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="others" slot="start"></ion-icon>
-            <ion-label>Otras Categorías</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
+    <ion-buttons slot="start">
+      <ion-button class="menu" (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"> </ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-img
       class="toolbar-logo"
       src="./assets/logos/Ripley_logo_R_website_with_bg_2016-present.webp"
     >
     </ion-img>
-    <ion-buttons slot="start">
-      <ion-menu-button name="menu-sharp"></ion-menu-button>
-    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button class="notification">
-        <ion-icon name="notifications-sharp"></ion-icon>
+        <ion-icon name="notifications-outline"></ion-icon>
       </ion-button>
-      <ion-button class="filter">
-        <ion-icon name="filter-sharp"></ion-icon>
+      <ion-button class="person" (click)="account()">
+        <ion-icon name="person-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -108,7 +23,7 @@
 
 <ion-content [fullscreen]="true">
   <!-- <ion-content padding class="background"> -->
-  <ion-card>
+  <ion-card class="welcome">
     <ion-card-content>
       <ion-item lines="none">
         <ion-icon name="person-circle-outline"></ion-icon>
@@ -118,9 +33,73 @@
       </ion-label>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-searchbar placeholder="Buscar"></ion-searchbar>
+  <ion-card class="searchbar">
+    <ion-searchbar placeholder="Buscar producto"></ion-searchbar>
   </ion-card>
+
+  <div class="category-title" style="color: #6a308d">
+    <h2 class="font-bold">Categoría</h2>
+    <p>Ver todo</p>
+  </div>
+
+  <div class="category-slider">
+    <ion-slides
+      [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+    >
+      <ion-slide *ngFor="let category of categories">
+        <ion-col>
+          <h4>{{ category.name }}</h4>
+          <img src="{{ category.image }}" />
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="featured-title" style="color: #6a308d">
+    <h2 class="font-bold">Destacados</h2>
+    <p>Ver todo</p>
+  </div>
+
+  <div class="product-slider">
+    <ion-slides
+      [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+    >
+      <ion-slide *ngFor="let product of featuredProducts">
+        <ion-col
+          class="ion-text-left"
+          routerLink="/item-details"
+          routerDirection="forward"
+        >
+          <img src="{{ product.image }}" />
+          <p>${{ product.price }}</p>
+          <h6>{{ product.name }}</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="best-seller-title" style="color: #6a308d">
+    <h2 class="font-bold">Mejor vendido</h2>
+    <p>Ver todo</p>
+  </div>
+
+  <div class="product-slider">
+    <ion-slides
+      [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+    >
+      <ion-slide *ngFor="let product of bestSellProducts">
+        <ion-col
+          class="ion-text-left"
+          routerLink="/item-details"
+          routerDirection="forward"
+        >
+          <img src="{{ product.image }}" />
+          <p>${{ product.price }}</p>
+          <h6>{{ product.name }}</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
 
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button>
@@ -148,16 +127,20 @@
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="account" (click)="account()">
-          <ion-icon name="person-circle-sharp"></ion-icon>
+        <ion-tab-button tab="home" (click)="home()">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="bag" (click)="bag()">
+          <ion-icon name="bag-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="scan" (click)="scan()">
-          <ion-icon name="scan-sharp"></ion-icon>
+          <ion-icon name="scan-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="settings" (click)="settings()">
-          <ion-icon name="settings-sharp"></ion-icon>
+          <ion-icon name="settings-outline"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

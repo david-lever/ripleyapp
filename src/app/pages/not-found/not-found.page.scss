@@ -14,8 +14,8 @@ ion-img.toolbar-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 6vh;
-  height: 6vh;
+  width: 4.5vh;
+  height: 4.5vh;
 }
 
 .title {
@@ -45,7 +45,7 @@ ion-content {
 }
 
 ion-content.background {
-  --background: url(../../../assets/img/bg.png) 0 0/100% 100% no-repeat;
+  --background: url(../../../assets/img/bg.webp) 0 0/100% 100% no-repeat;
   -webkit-filter: blur(10px);
   --moz-filter: blur(10px);
   --o-filter: blur(10px);

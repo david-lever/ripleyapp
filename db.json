@@ -2,57 +2,70 @@
   "users": [
     {
       "id": 1,
-      "nombre": "Programación de base de datos",
-      "Seccion": "004D",
-      "Jornada": "Diurna",
-      "Horario": "7",
-      "Profesor": "Jesus Parra"
+      "username": "fernando",
+      "password": "qwerty"
     },
     {
       "id": 2,
-      "nombre": "Arquitectura de Software",
-      "Seccion": "005D",
-      "Jornada": "Vespertina",
-      "Horario": "8",
-      "Profesor": "Hernan Saavedra"
+      "username": "david",
+      "password": "qwerty"
     },
     {
       "id": 3,
-      "nombre": "Ingenieria de Software",
-      "Seccion": "005D",
-      "Jornada": "Diurna",
-      "Horario": "8",
-      "Profesor": "Carolina Vial"
+      "username": "daniela",
+      "password": "qwerty"
     },
     {
       "id": 4,
-      "nombre": "Programación de algoritmos",
-      "Seccion": "005D",
-      "Jornada": "Diurna",
-      "Horario": "6",
-      "Profesor": "Yaravi Villegas"
+      "username": "felix",
+      "password": "qwerty"
     },
     {
       "id": 5,
-      "nombre": "Diseño de Prototipos",
-      "Seccion": "007D",
-      "Jornada": "Diurna",
-      "Horario": "9",
-      "Profesor": "René Calquin"
+      "username": "alexia",
+      "password": "qwerty"
     }
   ],
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "Estudiar para prueba",
-      "body": "17:00",
-      "userId": 1
+      "title": "PARKA CRINKLE",
+      "description": "Moderno. Atrevido. Innovador. Calvin Klein Menswear ofrece una selección de prendas de gran calidad para hombre que van desde trajes a medida hasta ropa deportiva de lujo.",
+      "brand": "CALVIN KLEIN",
+      "price": 179990,
+      "image": "https://s3-us-west-2.amazonaws.com/im-prod-products-images/p-k10k107485-pd0-1-7564258e-09ad-4365-b180-7634d9f3d834.jpg"
     },
     {
       "id": 2,
-      "title": "Estudiar",
-      "body": "13:00",
-      "userId": 5
+      "title": "PARKA ITALIANA LARGA BORDADA NEGRO",
+      "description": "Parka Italiana Larga Bordada Gorro, Parka exclusiva importada de Italia, Material Poliester, Impermeable y acolchada, Gorro no desmontable, Diseño Bordada, Cierre.",
+      "brand": "BOUS",
+      "price": 195990,
+      "image": "https://s3-sa-east-1.amazonaws.com/centryproduction/belanit-inventario/products/624ca52109b66b36484363f5/image/624ca52109b66b36484363f5/original/AYC3_0011_Capa_1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "APPLE IPHONE 13 PRO MAX 1TB VERDE ALPINO",
+      "description": "Deslumbra con el iPhone 13 Pro Max de 1TB de almacenamiento. Modelo de funcionamiento basado en Chip A15 Bionic y Neural Engine de 16 núcleos. Este teléfono posee pantalla Super Retina XDR con ProMotion de 6,7 pulgadas y tecnología True Tone para un visionado óptimo. Apuesta con cámara triple de 12 Mpx con teleobjetivo, gran angular y ultra gran angular para captar de manera óptima tu entorno.",
+      "brand": "APPLE",
+      "price": 1749990,
+      "image": "https://home.ripley.cl/store/Attachment/WOP/D191/2000390304441/2000390304441_2.jpg"
+    },
+    {
+      "id": 4,
+      "title": "APPLE IPHONE 13 PRO MAX 512GB ORO",
+      "description": "Deslumbra con el iPhone 13 Pro Max de 512GB de almacenamiento. Modelo de funcionamiento basado en Chip A15 Bionic y Neural Engine de 16 núcleos. Este teléfono posee pantalla Super Retina XDR con Pro Motion 6,7 pulgadas y tecnología True Tone para un visionado óptimo. Apuesta con sistema de cámaras Pro de 12 MP: teleobjetivo, gran angular y ultra gran angular.",
+      "brand": "APPLE",
+      "price": 1549990,
+      "image": "https://home.ripley.cl/store/Attachment/WOP/D191/2000387067878/2000387067878_2.jpg"
+    },
+    {
+      "id": 5,
+      "title": "REFRIGERADOR SAMSUNG FRENCH DOOR 703 LTS CON FAMILY HUB",
+      "description": "Tablero familiar, Calendario, Memo, To-do, Gallery, Morning Brief, Whiteboard, Trivia, SmartView (Phone / TV Mirroring), TuneIn / Spotify / Amazon Music, View Inside, Vista táctil y Vista rápida, Recetas inteligentes, Planificador de comidas con un plan rápido, Receta para horno, Lista de compras para comercio electrónico, SmartThings, SmartThings Video, Llamadas Bluetooth, Almacenamiento flexible, El Centro de Bebidas.",
+      "brand": "SAMSUNG",
+      "price": 2469990,
+      "image": "https://home.ripley.cl/store/Attachment/WOP/D136/2000383953090/2000383953090_2.jpg"
     }
   ]
 }

@@ -24,16 +24,20 @@
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="account" (click)="account()">
-          <ion-icon name="person-circle-sharp"></ion-icon>
+        <ion-tab-button tab="home" (click)="home()">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="bag" (click)="bag()">
+          <ion-icon name="bag-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="scan" (click)="scan()">
-          <ion-icon name="scan-sharp"></ion-icon>
+          <ion-icon name="scan-outline"></ion-icon>
         </ion-tab-button>
 
         <ion-tab-button tab="settings" (click)="settings()">
-          <ion-icon name="settings-sharp"></ion-icon>
+          <ion-icon name="settings-outline"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

@@ -1,0 +1,35 @@
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Header Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-header {
+  --background: ##6a308d;
+  backdrop-filter: blur(7px);
+}
+
+.header-toolbar {
+  --background: #000000;
+  --color: #6a308d;
+  backdrop-filter: blur(7px);
+}
+
+.title {
+  --color: #ffffff;
+  height: 7vh;
+  text-align: center;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Content ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-menu {
+  --background: linear-gradient(210.55deg, #ebf2f97e 19.14%, #6a308d7e 154.68%);
+  box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(15px);
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+}

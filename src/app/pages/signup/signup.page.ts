@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signup',
@@ -7,24 +8,41 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
-  username: string;
+  rut: string;
   password: string;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private alertController: AlertController
+  ) {}
   ngOnInit() {}
-  // Esto del private router: Router es necesario hacerlo y debo seleccionar Router para que lo importe.
 
   signup() {
-    // Utilizo api enrutador para llamar la página.
     let navigationExtras: NavigationExtras = {
-      state: { username: this.username, password: this.password },
-      // Asigno un elemento con clave y valor.
+      state: { rut: this.rut, password: this.password },
     };
-    // Asigno al navigationExtras como parámetro para enviar el dato.
     this.router.navigate(['/home'], navigationExtras);
   }
 
-  account() {
+  async alert() {
+    const alert = await this.alertController.create({
+      cssClass: 'alert',
+      header: 'Confirmación de cuenta registrada',
+      message: 'Ha creado la cuenta de manera exitosa.',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('', role);
+  }
+
+  home() {
+    this.router.navigate(['/home']);
+  }
+
+  bag() {
     this.router.navigate(['/signup']);
   }
 

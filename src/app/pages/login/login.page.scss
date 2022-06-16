@@ -1,0 +1,251 @@
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Header Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-header {
+  --background: ##6a308d;
+  backdrop-filter: blur(7px);
+}
+
+.header-toolbar {
+  --background: #000000;
+  backdrop-filter: blur(7px);
+}
+
+ion-img.toolbar-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+.title {
+  --color: #ffffff;
+  height: 7vh;
+  text-align: center;
+}
+
+ion-buttons {
+  ion-back-button {
+    --color: #ffffff;
+  }
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Background ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-content {
+  --background: linear-gradient(
+      180deg,
+      #fbf6ff 0%,
+      #eae1f0 48.96%,
+      #e2d3eb 100%
+    ),
+    rgba(68, 18, 101, 0.3);
+  --backdrop-filter: blur(100px);
+  --width: calc(100% + 15px);
+}
+
+ion-content.background {
+  --background: url(../../../assets/img/bg.webp) 0 0/100% 100% no-repeat;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Card ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-card {
+  --background: linear-gradient(210.55deg, #ebf2f97e 19.14%, #6a308d7e 154.68%);
+  box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ion-item {
+  margin: 1.5vh;
+  font-weight: regular;
+  color: #6a308d;
+  --background: radial-gradient(
+    315.18% 315.18% at -124.11% -101.79%,
+    #f1e5f9 19%,
+    #ffffff 77.71%
+  );
+  --box-shadow: -6px -4px 16px rgba(255, 255, 255, 0.36),
+    6px 4px 16px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  --filter: blur(4px);
+}
+
+ion-card-subtitle {
+  padding: 2vh;
+}
+
+h2.text-center {
+  font-weight: bold;
+  color: "#6a308d";
+}
+
+div.signup {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 1.5vh;
+  color: #6a308d;
+}
+
+ion-button.signup-link {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0.2vh;
+  color: #f00a47;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Logo ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 25%;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Input ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-label {
+  color: #6a308d;
+}
+
+ion-input {
+  color: #6a308d;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-button.login {
+  font-size: 15px;
+  font-weight: bold;
+  color: #6a308d;
+  --background: linear-gradient(90.48deg, #fdba31 -57.8%, #fedc94 146.19%);
+  --box-shadow: -4px -2px 16px rgba(255, 255, 255, 0.509),
+    4px 2px 16px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  --border-radius: 13px;
+  --webkit-transition: 0.3s all ease;
+  --moz-transition: 0.3s all ease;
+  --transition: 0.3s all ease;
+  margin: 4vh 4vh;
+}
+
+ion-button.login:hover {
+  font-size: 15px;
+  font-weight: bold;
+  color: #6a308d;
+  --background: linear-gradient(90.48deg, #f00a47 -57.8%, #ee275c 146.19%);
+  --box-shadow: -4px -2px 16px rgba(255, 255, 255, 0.509),
+    4px 2px 16px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  --border-radius: 30px;
+  --webkit-transition: 0.8s all ease;
+  --moz-transition: 0.8s all ease;
+  --transition: 0.8s all ease;
+  margin: 4vh 4vh;
+}
+
+ion-item.input {
+  height: 7vh;
+  border-radius: 30px;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Checkbox ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+label {
+  font-size: 13px;
+  font-weight: 550;
+  margin-right: 0.2vh;
+  color: #6a308d;
+}
+
+input.checkbox {
+  margin-top: 3vh;
+  margin-right: 2vh;
+  height: 2vh;
+  width: 2vh;
+  --background: radial-gradient(
+    315.18% 315.18% at -124.11% -101.79%,
+    #f1e5f9 19%,
+    #ffffff 77.71%
+  );
+  --box-shadow: -6px -4px 16px rgba(255, 255, 255, 0.36),
+    6px 4px 16px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  border-radius: 30vh;
+  font-weight: bold;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Floating Bar Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-fab-button {
+  --background: linear-gradient(
+      305.4deg,
+      rgba(253, 186, 49, 0.7) 13.72%,
+      rgba(255, 234, 190, 0.7) 93.17%
+    ),
+    rgba(251, 189, 30, 0.92);
+  --box-shadow: 6px 4px 16px rgba(68, 18, 101, 0.549),
+    -6px -4px 16px rgba(255, 255, 255, 0.36),
+    inset -8px -6px 26px rgba(255, 255, 255, 0.18);
+  --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.38, 0.66, 0, 1) both;
+  ion-icon {
+    color: #6a308d;
+  }
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-footer {
+  --background: rgba(228, 237, 245, 0.75);
+  backdrop-filter: blur(7px);
+}
+
+ion-tab-button {
+  ion-icon {
+    color: #6a308d;
+  }
+}

@@ -14,8 +14,12 @@ ion-img.toolbar-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 6vh;
-  height: 6vh;
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+ion-button {
+  --color: #ffffff;
 }
 
 .title {
@@ -33,12 +37,16 @@ ion-buttons {
   }
 }
 
-.notification {
-  --color: #ffffff;
+.menu {
+  color: #ffffff;
 }
 
-.filter {
-  --color: #ffffff;
+.notification {
+  color: #ffffff;
+}
+
+.person {
+  color: #ffffff;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Background ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
@@ -62,7 +70,7 @@ ion-list-header {
 }
 
 ion-content.background {
-  --background: url(../../../assets/img/bg.png) 0 0/100% 100% no-repeat;
+  --background: url(../../../assets/img/bg.webp) 0 0/100% 100% no-repeat;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Card ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
@@ -82,6 +90,11 @@ ion-card {
   border-radius: 20px;
   --transform: rotate(-90deg);
   --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+}
+
+ion-class.welcome {
   -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
   animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
 }
@@ -163,12 +176,166 @@ ion-searchbar {
   }
 }
 
+ion-class.searchbar {
+  -webkit-animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
+}
+
 h2.text-center {
   margin: auto;
-  font-weight: bold;
+  font-weight: 600;
   font-size: larger;
   color: "#6a308d";
   text-align: center;
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Title ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+.category-title {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  color: "#6a308d";
+  -webkit-animation: slide-in-bottom 2s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 2s cubic-bezier(0.38, 0.66, 0, 1) both;
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 0 16px;
+    color: "#6a308d";
+  }
+
+  p {
+    margin: 0 16px 0 0;
+    color: "#6a308d";
+  }
+}
+
+.featured-title {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  color: "#6a308d";
+  -webkit-animation: slide-in-bottom 2.25s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 2.25s cubic-bezier(0.38, 0.66, 0, 1) both;
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 0 16px;
+    color: "#6a308d";
+  }
+
+  p {
+    margin: 0 16px 0 0;
+    color: "#6a308d";
+  }
+}
+
+.best-seller-title {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  color: "#6a308d";
+  -webkit-animation: slide-in-bottom 2.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 2.5s cubic-bezier(0.38, 0.66, 0, 1) both;
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 0 16px;
+    color: "#6a308d";
+  }
+
+  p {
+    margin: 0 16px 0 0;
+    color: "#6a308d";
+  }
+}
+
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Slider ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+.font-bold {
+  font-weight: 500;
+}
+
+.category-slider {
+  ion-slide {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+    ion-col {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.16);
+      }
+    }
+  }
+}
+
+.product-slider {
+  margin-bottom: 30px;
+
+  ion-slide {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 10px;
+
+    ion-col {
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      p {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+ion-slide:focus {
+  outline: none !important;
+}
+
+ion-col:focus {
+  outline: none !important;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Floating Bar Button ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰

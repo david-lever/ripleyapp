@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.alert {
+  --background: linear-gradient(210.55deg, #ebf2f9e8 19.14%, #dec4eee8 154.68%);
+  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(15px);
+  --backdrop-opacity: 0.3;
+  border-radius: 20px;
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+}

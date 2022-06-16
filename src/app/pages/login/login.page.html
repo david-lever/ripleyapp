@@ -1,9 +1,135 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+<ion-header [translucent]="false">
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons class="back-button" slot="start">
+      <ion-back-button
+        text=""
+        [icon]="buttonIcon"
+        routerLink="/home"
+        routerDirection="back"
+      >
+      </ion-back-button>
+    </ion-buttons>
+    <ion-img
+      class="toolbar-logo"
+      src="./assets/logos/Ripley_logo_R_website_with_bg_2016-present.webp"
+    >
+    </ion-img>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-content padding class="background">
+    <div>
+      <ion-card class="ion-text-center">
+        <ion-card-title>
+          <ion-card-subtitle>
+            <ion-img
+              class="logo"
+              src="./assets/logos/Ripley_logo_R_website_borders_2016-present.webp"
+            ></ion-img>
+          </ion-card-subtitle>
+        </ion-card-title>
+        <ion-label>
+          <h2 class="text-center">Inicio de sesión</h2>
+        </ion-label>
+        <ion-card-content>
+          <form novalidate (ngSubmit)="onSubmit()" #f="ngForm">
+            <ion-item class="input" lines="none">
+              <ion-label style="color: #6a308d" position="floating"
+                >Usuario</ion-label
+              >
+              <ion-input
+                type="text"
+                [(ngModel)]="username"
+                required
+                minlength="2"
+                required
+                maxlength="8"
+                class="form-control"
+                name="username"
+              ></ion-input>
+            </ion-item>
+            <ion-item class="input" lines="none">
+              <ion-label style="color: #6a308d" position="floating"
+                >Contraseña</ion-label
+              >
+              <ion-input
+                type="password"
+                [(ngModel)]="password"
+                required
+                minlength="4"
+                required
+                maxlength="8"
+                class="form-control"
+                name="password"
+              ></ion-input>
+            </ion-item>
+          </form>
 
+          <ion-button
+            type="submit"
+            [disabled]="f.invalid"
+            class="login"
+            expand="block"
+            (click)="login()"
+            >Iniciar sesión</ion-button
+          >
+          <div class="signup">
+            ¿Eres nuevo en Ripley?<br />
+            <ion-button
+              class="signup-link"
+              fill="clear"
+              routerLink="/signup"
+              routerDirection="forward"
+              >Crear cuenta</ion-button
+            >
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+      <ion-fab-button>
+        <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="light">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-content>
 </ion-content>
+
+<ion-footer class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" (click)="home()">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="bag" (click)="bag()">
+          <ion-icon name="bag-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="scan" (click)="scan()">
+          <ion-icon name="scan-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="settings" (click)="settings()">
+          <ion-icon name="settings-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
