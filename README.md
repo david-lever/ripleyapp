@@ -37,8 +37,6 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
   - [x] Utilización de state y datos que cambian en el tiempo.
   - [x] Implementación de animaciones en componentes.
 
-### Sprint 2
-
 ## Team N° 3 - Section 001D
 
 ### Members
@@ -46,5 +44,3 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
 #### Francisco Díaz [@panchodiaz](https://github.com/panchodiaz)
 
 #### David Lever [@david-lever](https://github.com/david-lever)
-
-#### Luís Olivares [@LuisittoPremium](https://github.com/LuisittoPremium)
