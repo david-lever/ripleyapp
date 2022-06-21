@@ -19,7 +19,7 @@ import { AlertController } from '@ionic/angular';
   imports: [
     BrowserModule,
     IonicModule.forRoot({
-      mode: 'md',
+      mode: 'ios',
     }),
     IonicStorageModule.forRoot(),
     AppRoutingModule,

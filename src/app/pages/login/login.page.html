@@ -1,4 +1,4 @@
-<ion-header [translucent]="false">
+<ion-header>
   <ion-toolbar class="header-toolbar">
     <ion-buttons class="back-button" slot="start">
       <ion-back-button
@@ -11,13 +11,14 @@
     </ion-buttons>
     <ion-img
       class="toolbar-logo"
+      (click)="home()"
       src="./assets/logos/Ripley_logo_R_website_with_bg_2016-present.webp"
     >
     </ion-img>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content fullscreen>
   <ion-content padding class="background">
     <div>
       <ion-card class="ion-text-center">
@@ -110,7 +111,7 @@
   </ion-content>
 </ion-content>
 
-<ion-footer class="ion-no-border" [translucent]="true">
+<ion-footer class="ion-no-border" translucent>
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">

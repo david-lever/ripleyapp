@@ -38,15 +38,15 @@ ion-buttons {
 }
 
 .menu {
-  color: #ffffff;
+  --color: #ffffff;
 }
 
 .notification {
-  color: #ffffff;
+  --color: #ffffff;
 }
 
 .person {
-  color: #ffffff;
+  --color: #ffffff;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Background ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
@@ -63,24 +63,23 @@ ion-content {
   --width: calc(100% + 15px);
 }
 
-ion-list-header {
-  --font-family: Gilroy;
-  --font-weight: bold;
-  --color: #6a308d;
-}
-
 ion-content.background {
   --background: url(../../../assets/img/bg.webp) 0 0/100% 100% no-repeat;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Card ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-ion-card {
+ion-card.welcome {
   margin: 3vh 3vh;
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
-  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+  box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
     16px 4px 64px rgba(68, 18, 101, 0.549),
     inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  box-shadow: -8px -4px 16px rgba(255, 255, 255, 1),
+    6px 4px 16px rgba(135, 104, 155, 0.549),
+    inset -0.5px -0.5px -0.5px rgba(201, 167, 224, 0.549),
+    inset 2.5px 2.5px 2.5px rgba(68, 18, 101, 0.549),
+    inset -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4);
   --webkit-filter: blur(10px);
   --moz-filter: blur(10px);
   --o-filter: blur(10px);
@@ -88,13 +87,10 @@ ion-card {
   --filter: blur(10px);
   backdrop-filter: blur(7px);
   border-radius: 20px;
+  background: radial-gradient(to right, #6a308d, #faf1ff) border-box;
+  border: 0.1px solid;
   --transform: rotate(-90deg);
   --color: #6a308d;
-  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
-  animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
-}
-
-ion-class.welcome {
   -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
   animation: slide-in-bottom 1.5s cubic-bezier(0.38, 0.66, 0, 1) both;
 }
@@ -145,21 +141,22 @@ ion-label.user {
   --color: #6a308d;
 }
 
-ion-list {
-  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
-  ion-icon {
-    --background: #6a308d;
-    --box-shadow: -8px -4px 16px #ffffff,
-      6px 4px 16px rgba(135, 104, 155, 0.549),
-      inset 0.5px 0.5px 0.5px rgba(68, 18, 101, 0.549),
-      inset -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4);
-  }
+h2.text-center {
+  margin: auto;
+  font-weight: 500;
+  font-size: larger;
+  color: "#6a308d";
+  text-align: center;
 }
 
-ion-searchbar {
-  font-style: italic;
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Search Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+
+ion-card.searchbar {
+  font-weight: 500;
+  font-size: 15px;
+  margin: 3vh 3vh;
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
-  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
+  box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
     16px 4px 64px rgba(68, 18, 101, 0.549),
     inset -8px -6px 80px rgba(255, 255, 255, 0.18);
   --webkit-filter: blur(10px);
@@ -169,36 +166,72 @@ ion-searchbar {
   --filter: blur(10px);
   backdrop-filter: blur(7px);
   border-radius: 20px;
+  background: radial-gradient(to right, #6a308d, #faf1ff) border-box;
+  border: 0.1px solid;
   --transform: rotate(-90deg);
   --color: #6a308d;
+  -webkit-animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
+  animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
+}
+
+ion-searchbar {
+  font-weight: 500;
+  font-size: 14px;
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --box-shadow: -8px -4px 16px rgba(255, 255, 255, 1),
+    6px 4px 16px rgba(135, 104, 155, 0.549),
+    inset -0.5px -0.5px -0.5px rgba(201, 167, 224, 0.549),
+    inset 2.5px 2.5px 2.5px rgba(68, 18, 101, 0.549),
+    inset -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  --backdrop-filter: blur(7px);
+  --border-radius: 20px;
+  --transform: rotate(-90deg);
+  --color: #6a308d;
+  --placeholder-color: #6a308d;
+  --placeholder-font-style: italic;
+  --placeholder-font-weight: 300;
+  --placeholder-opacity: 0.7;
   ion-icon {
     color: #6a308d;
   }
 }
 
-ion-class.searchbar {
-  -webkit-animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
-  animation: slide-in-bottom 1.75s cubic-bezier(0.38, 0.66, 0, 1) both;
+.sc-ion-searchbar-ios-h {
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  border-radius: 15px;
 }
 
-h2.text-center {
-  margin: auto;
-  font-weight: 600;
-  font-size: larger;
-  color: "#6a308d";
-  text-align: center;
+.sc-ion-searchbar-md-h {
+  --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
+  border-radius: 15px;
+}
+
+.sc-ion-searchbar-ios-h {
+  --icon-color: #6a308d;
+}
+
+.sc-ion-searchbar-md-h {
+  --icon-color: #6a308d;
 }
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Title ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-.category-title {
+.categories-title {
   display: flex;
   font-size: 14px;
   font-weight: 600;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 32px;
-  color: "#6a308d";
+  --color: "#6a308d";
   -webkit-animation: slide-in-bottom 2s cubic-bezier(0.38, 0.66, 0, 1) both;
   animation: slide-in-bottom 2s cubic-bezier(0.38, 0.66, 0, 1) both;
 
@@ -221,7 +254,7 @@ h2.text-center {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 32px;
-  color: "#6a308d";
+  --color: "#6a308d";
   -webkit-animation: slide-in-bottom 2.25s cubic-bezier(0.38, 0.66, 0, 1) both;
   animation: slide-in-bottom 2.25s cubic-bezier(0.38, 0.66, 0, 1) both;
 
@@ -244,7 +277,7 @@ h2.text-center {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 32px;
-  color: "#6a308d";
+  --color: "#6a308d";
   -webkit-animation: slide-in-bottom 2.5s cubic-bezier(0.38, 0.66, 0, 1) both;
   animation: slide-in-bottom 2.5s cubic-bezier(0.38, 0.66, 0, 1) both;
 
@@ -266,7 +299,7 @@ h2.text-center {
   font-weight: 500;
 }
 
-.category-slider {
+.categories-slider {
   ion-slide {
     width: 150px;
     height: 100px;
@@ -361,8 +394,8 @@ ion-fab-button {
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
 ion-footer {
-  --background: rgba(228, 237, 245, 0.75);
-  backdrop-filter: blur(7px);
+  --background: rgba(250, 243, 255, 0.775);
+  --backdrop-filter: blur(10px);
 }
 
 ion-tab-button {

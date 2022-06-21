@@ -1,5 +1,5 @@
-<ion-header [translucent]="false">
-  <ion-toolbar class="header-toolbar">
+<ion-header>
+  <ion-toolbar class="header-toolbar" [class.show-background]="showToolbar">
     <ion-buttons slot="start">
       <ion-button class="menu" (click)="toggleMenu()">
         <ion-icon slot="icon-only" name="menu-outline"> </ion-icon>
@@ -21,7 +21,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <!-- <ion-content padding class="background"> -->
   <ion-card class="welcome">
     <ion-card-content>
@@ -34,15 +34,15 @@
     </ion-card-content>
   </ion-card>
   <ion-card class="searchbar">
-    <ion-searchbar placeholder="Buscar producto"></ion-searchbar>
+    <ion-searchbar placeholder="Buscar productos"></ion-searchbar>
   </ion-card>
 
-  <div class="category-title" style="color: #6a308d">
-    <h2 class="font-bold">Categoría</h2>
+  <div class="categories-title" style="color: #6a308d">
+    <h2 class="font-bold">Categorías</h2>
     <p>Ver todo</p>
   </div>
 
-  <div class="category-slider">
+  <div class="categories-slider">
     <ion-slides
       [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
     >
@@ -123,7 +123,7 @@
   <!-- </ion-content> -->
 </ion-content>
 
-<ion-footer class="ion-no-border" [translucent]="true">
+<ion-footer class="ion-no-border" translucent collapse="fade">
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">

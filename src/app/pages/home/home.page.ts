@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { ScrollDetail } from '@ionic/core';
 import { DblocalService } from '../..//services/dblocal.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class HomePage implements OnInit {
     private router: Router,
     private menuCtrl: MenuController
   ) {
-    this.activeroute.queryParams.subscribe((parameters) => {
+    this.activeroute.queryParams.subscribe((params) => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.username =
           this.router.getCurrentNavigation().extras.state.username;
@@ -30,6 +31,19 @@ export class HomePage implements OnInit {
         console.log(this.username, this.password);
       }
     });
+  }
+
+  showToolbar = false;
+
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 225;
+    }
+  }
+
+  account() {
+    this.router.navigate(['/signup']);
   }
 
   home() {
@@ -46,10 +60,6 @@ export class HomePage implements OnInit {
 
   settings() {
     this.router.navigate(['/not-found']);
-  }
-
-  account() {
-    this.router.navigate(['/signup']);
   }
 
   ngOnInit() {
