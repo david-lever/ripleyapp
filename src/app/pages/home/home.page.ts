@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ScrollDetail } from '@ionic/core';
 import { DblocalService } from '../..//services/dblocal.service';
+import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +22,8 @@ export class HomePage implements OnInit {
   constructor(
     private activeroute: ActivatedRoute,
     private router: Router,
-    private menuCtrl: MenuController
+    private menuCtrl: MenuController,
+    private authService: AuthService
   ) {
     this.activeroute.queryParams.subscribe((params) => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -66,6 +69,15 @@ export class HomePage implements OnInit {
     // this.categories = this.data.getCategories();
     // this.featuredProducts = this.data.getFeaturedProducts();
     // this.bestSellProducts = this.data.getBestSellProducts();
+  }
+
+  onSignup(form: NgForm) {
+    if (form.valid) {
+      this.authService.signUpWithEmail({
+        email: form.control.value.email,
+        password: form.control.value.password,
+      });
+    }
   }
 
   toggleMenu() {

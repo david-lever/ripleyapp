@@ -54,12 +54,12 @@ ion-buttons {
 ion-content {
   --background: linear-gradient(
       180deg,
-      #fbf6ff 0%,
+      #fbf6ff 46%,
       #eae1f0 48.96%,
       #e2d3eb 100%
     ),
     rgba(68, 18, 101, 0.3);
-  --backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
   --width: calc(100% + 15px);
 }
 

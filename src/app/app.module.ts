@@ -12,6 +12,12 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { EmailJSResponseStatus } from 'emailjs-com';
 import { AlertController } from '@ionic/angular';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +31,11 @@ import { AlertController } from '@ionic/angular';
     AppRoutingModule,
     HttpClientModule,
     NgxQRCodeModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

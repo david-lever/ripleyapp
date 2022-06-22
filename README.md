@@ -30,7 +30,7 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
       - [x] _Producir el mensaje de confirmación en JavaScript Popup Box._
     - [ ] Página de Inicio. (Home)
       - [x] _Diseñar view de catálogo de productos._
-      - [ ] _Crear model de catálogos utilizando la librería Cosmic JS._
+      - [x] _Crear model de catálogos utilizando la librería Cosmic JS._
       - [ ] _Elaborar los tipos de objetos de los productos._
       - [ ] _Programar la lista de categorías y productos._
       - [ ] _Desarrollar el filtro de productos por medio de Cosmic JS API._

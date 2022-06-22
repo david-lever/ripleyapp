@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { IUser } from 'src/app/interfaces/user';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +13,7 @@ export class LoginPage implements OnInit {
   username: string;
   password: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {}
 
@@ -35,6 +38,27 @@ export class LoginPage implements OnInit {
 
   settings() {
     this.router.navigate(['/not-found']);
+  }
+
+  onLogin(form: NgForm): void {
+    if (form.valid) {
+      this.authService.loginWithEmail({
+        email: form.control.value.email,
+        password: form.control.value.password,
+      });
+    }
+  }
+
+  resetPassword(email: string): void {
+    this.authService.resetPassword(email);
+  }
+
+  googleAuth(): void {
+    this.authService.googleLogin();
+  }
+
+  onSignup(): void {
+    this.router.navigateByUrl('/signup');
   }
 
   onSubmit() {}
