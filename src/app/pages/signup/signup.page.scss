@@ -148,6 +148,25 @@ ion-img.logo {
 
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Input ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
+ion-item.input {
+  height: 7vh;
+  --background: radial-gradient(
+    315.18% 315.18% at -124.11% -101.79%,
+    #f1e5f9 59%,
+    #ffffff 77.71%
+  );
+  box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.509),
+    16px 4px 64px rgba(68, 18, 101, 0.549),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  --webkit-filter: blur(10px);
+  --moz-filter: blur(10px);
+  --o-filter: blur(10px);
+  --ms-filter: blur(10px);
+  --filter: blur(10px);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+}
+
 ion-label {
   --color: #6a308d;
 }
@@ -188,16 +207,11 @@ ion-button.signup:hover {
   margin: 1vh 4vh;
 }
 
-ion-item.input {
-  height: 7vh;
-  border-radius: 30px;
-}
-
 // ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Checkbox ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
 label {
   font-size: 13px;
-  font-weight: 550;
+  font-weight: 600;
   margin-right: 0.2vh;
   color: #6a308d;
 }

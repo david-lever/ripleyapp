@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
   onLogin(form: NgForm): void {
     if (form.valid) {
       this.authService.loginWithEmail({
-        email: form.control.value.email,
+        username: form.control.value.username,
         password: form.control.value.password,
       });
     }
