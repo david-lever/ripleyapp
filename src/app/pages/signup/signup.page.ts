@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,10 +12,12 @@ import { AlertController } from '@ionic/angular';
 export class SignupPage implements OnInit {
   rut: string;
   password: string;
+  data: any;
 
   constructor(
     private router: Router,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private authService: AuthService
   ) {}
   ngOnInit() {}
 
@@ -52,6 +56,15 @@ export class SignupPage implements OnInit {
 
   settings() {
     this.router.navigate(['/not-found']);
+  }
+
+  onSignup(form: NgForm) {
+    if (form.valid) {
+      this.authService.signUpWithEmail({
+        rut: form.control.value.rut,
+        password: form.control.value.password,
+      });
+    }
   }
 
   onSubmit() {}

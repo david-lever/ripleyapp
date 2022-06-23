@@ -71,15 +71,6 @@ export class HomePage implements OnInit {
     // this.bestSellProducts = this.data.getBestSellProducts();
   }
 
-  onSignup(form: NgForm) {
-    if (form.valid) {
-      this.authService.signUpWithEmail({
-        email: form.control.value.email,
-        password: form.control.value.password,
-      });
-    }
-  }
-
   toggleMenu() {
     this.menuCtrl.toggle();
   }
