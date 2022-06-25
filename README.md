@@ -39,8 +39,6 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
 
 ## Team N° 3 - Section 001D
 
-### Members
-
-#### Francisco Díaz [@panchodiaz](https://github.com/panchodiaz)
+### Member
 
 #### David Lever [@david-lever](https://github.com/david-lever)
