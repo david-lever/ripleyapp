@@ -8,6 +8,9 @@
     --background: transparent;
     --ion-color-base: transparent !important;
   }
+  ion-button {
+    text-transform: none;
+  }
 
   /** primary **/
   --ion-color-primary: #3880ff;

@@ -34,7 +34,12 @@
     </ion-card-content>
   </ion-card>
   <ion-card class="searchbar">
-    <ion-searchbar placeholder="Buscar productos"></ion-searchbar>
+    <ion-searchbar
+      placeholder="Buscar productos"
+      autocomplete="on"
+      autocorrect="on"
+      spellcheck="true"
+    ></ion-searchbar>
   </ion-card>
 
   <div class="categories-title" style="color: #6a308d">
@@ -124,7 +129,7 @@
 </ion-content>
 
 <ion-footer class="ion-no-border" translucent collapse="fade">
-  <ion-toolbar>
+  <ion-toolbar class="footer-toolbar">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home" (click)="home()">

@@ -63,11 +63,11 @@ ion-img.logo {
   height: 50%;
 }
 
-// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Footer Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-ion-footer {
+.footer-toolbar {
   --background: rgba(250, 243, 255, 0.775);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(20px);
 }
 
 ion-tab-button {

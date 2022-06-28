@@ -1,4 +1,4 @@
-<ion-header [translucent]="false">
+<ion-header>
   <ion-toolbar class="header-toolbar">
     <ion-buttons class="back-button" slot="start">
       <ion-back-button
@@ -18,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content fullscreen>
   <ion-content padding class="background">
     <div>
       <ion-card class="ion-text-center">
@@ -68,11 +68,11 @@
           </form>
 
           <label
-            ><input type="checkbox" class="checkbox" /> Al registrarse, aceptas
+            ><input type="checkbox" class="checkbox" />Al registrarse, aceptas
             los términos y condiciones.</label
           ><br />
           <label
-            ><input type="checkbox" class="checkbox" /> Al registrarse, aceptas
+            ><input type="checkbox" class="checkbox" />Al registrarse, aceptas
             la política de seguridad de acuerdo a la Ley Nº 19.628.</label
           >
 
@@ -92,7 +92,7 @@
               fill="clear"
               routerLink="/login"
               routerDirection="forward"
-              >Inicia sesión</ion-button
+              >Iniciar sesión</ion-button
             >
           </div>
         </ion-card-content>
@@ -121,8 +121,8 @@
   </ion-content>
 </ion-content>
 
-<ion-footer class="ion-no-border" [translucent]="true">
-  <ion-toolbar>
+<ion-footer class="ion-no-border" translucent>
+  <ion-toolbar class="footer-toolbar">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home" (click)="home()">

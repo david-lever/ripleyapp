@@ -25,7 +25,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     IonicModule.forRoot({
-      mode: 'ios',
+      mode: 'md',
     }),
     IonicStorageModule.forRoot(),
     AppRoutingModule,

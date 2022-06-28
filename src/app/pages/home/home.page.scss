@@ -129,7 +129,7 @@ ion-item {
   border-radius: 17.5px;
   ion-icon {
     display: block;
-    margin: 0vh auto;
+    margin: 2vh auto;
     color: #6a308d;
   }
 }
@@ -144,7 +144,7 @@ ion-label.user {
 h2.text-center {
   margin: auto;
   font-weight: 500;
-  font-size: larger;
+  font-size: 22px;
   color: "#6a308d";
   text-align: center;
 }
@@ -153,8 +153,8 @@ h2.text-center {
 
 ion-card.searchbar {
   font-weight: 500;
-  font-size: 15px;
-  margin: 3vh 3vh;
+  font-size: 17px;
+  margin: 4vh 4vh;
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
   box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
     16px 4px 64px rgba(68, 18, 101, 0.549),
@@ -176,7 +176,7 @@ ion-card.searchbar {
 
 ion-searchbar {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 17px;
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
   --box-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
     16px 4px 64px rgba(68, 18, 101, 0.549),
@@ -197,7 +197,7 @@ ion-searchbar {
   --color: #6a308d;
   --placeholder-color: #6a308d;
   --placeholder-font-style: italic;
-  --placeholder-font-weight: 300;
+  --placeholder-font-weight: 400;
   --placeholder-opacity: 0.7;
   ion-icon {
     color: #6a308d;
@@ -207,18 +207,12 @@ ion-searchbar {
 .sc-ion-searchbar-ios-h {
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
   border-radius: 15px;
+  --icon-color: #6a308d;
 }
 
 .sc-ion-searchbar-md-h {
   --background: linear-gradient(210.55deg, #faf1ff7e 19.14%, #e9d8f57e 154.68%);
   border-radius: 15px;
-}
-
-.sc-ion-searchbar-ios-h {
-  --icon-color: #6a308d;
-}
-
-.sc-ion-searchbar-md-h {
   --icon-color: #6a308d;
 }
 
@@ -391,11 +385,11 @@ ion-fab-button {
   }
 }
 
-// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Tab Bar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ Footer Toolbar ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 
-ion-footer {
+.footer-toolbar {
   --background: rgba(250, 243, 255, 0.775);
-  --backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 ion-tab-button {
