@@ -23,16 +23,16 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
 - [ ] Creación e implementación de la App en Ionic.
   - [ ] Codificación de las pages.
     - [ ] Registro de usuario. (Sign Up)
-      - [x] _Crear view o panel del formulario de registro._
+      - [x] _Crear view del formulario de registro._
       - [x] _Construir validación de los campos del formulario._
-      - [ ] _Elaborar módulo de registro de datos del usuario._
+      - [ ] _Elaborar módulo del registro de datos del usuario._
       - [ ] _Desarrollar DB para el almacenamiento de los datos del usuario._
       - [x] _Producir el mensaje de confirmación en JavaScript Popup Box._
     - [ ] Página de Inicio. (Home)
-      - [x] _Diseñar view de catálogo de productos._
-      - [x] _Crear model de catálogos de productos utilizando Firestore._
-      - [ ] _Elaborar los tipos de objetos de los productos._
-      - [ ] _Programar la lista de categorías y productos._
+      - [x] _Diseñar view del catálogo de productos._
+      - [x] _Crear model del catálogos de productos utilizando Firestore._
+      - [ ] _Elaborar los tipos de objects de los productos._
+      - [ ] _Programar la list de categorías y productos._
       - [ ] _Desarrollar el filtro de productos por medio de Firebase API._
   - [x] Utilización de state y datos que cambian en el tiempo.
   - [x] Implementación de animaciones en componentes.
