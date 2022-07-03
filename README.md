@@ -32,7 +32,7 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
       - [x] _Diseñar view del catálogo de productos._
       - [x] _Crear model del catálogos de productos utilizando Firestore._
       - [ ] _Elaborar los tipos de objects de los productos._
-      - [ ] _Programar la list de categorías y productos._
+      - [ ] _Programar la lista de categorías y productos._
       - [ ] _Desarrollar el filtro de productos por medio de Firebase API._
   - [x] Utilización de state y datos que cambian en el tiempo.
   - [x] Implementación de animaciones en componentes.
