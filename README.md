@@ -40,8 +40,8 @@ Este repositorio contiene el source code de la Aplicación Móvil híbrida para 
 ### Sprint 2
 
 - [x] Creación e implementación de la App en Ionic.
-  - [x] Codificación de las pages.
-    - [x] Registro de usuario. (Sign Up)
+  - [x] Codificación de la page.
+    - [x] Inicio de sesión del usuario. (Sign In)
       - [x] _Crear view del inicio de sesión del usuario._
       - [x] _Construir validación de los campos._
       - [x] _Elaborar módulo del inicio de sesión del usuario._
